@@ -1,7 +1,6 @@
 # PS2 Cheats Hub
 
-PS2 Cheats Hub est une application de bureau conçue pour aider à la gestion et à la conversion de codes de triche pour les jeux PlayStation 2, notamment pour une utilisation avec des émulateurs comme PCSX2 via le format PNACH.
-
+PS2 Cheats Hub est une application de bureau conçue pour aider à la gestion et à la conversion de codes de triche pour les jeux PlayStation 2.
 L'application fournit une interface graphique pour décrypter les codes Action Replay MAX (ARMAX) et Action Replay 2 / Gameshark 2 (AR2/GS2), les afficher au format brut et les convertir au format PNACH.
 
 ## Fonctionnalités Principales
@@ -41,7 +40,7 @@ Nuitka tentera de suivre les imports pour inclure les autres fichiers `.py` néc
 
 ## Licence
 
-Ce projet est basé sur le travail original de **parasyte (ou pyriell)** et est distribué sous les termes de la **Licence Publique Générale GNU (GNU GPL)**. Il est recommandé de consulter le fichier de licence spécifique (par exemple, `LICENSE` ou `COPYING`) inclus avec les sources originales ou d'en ajouter un si vous distribuez des versions modifiées, en précisant la version de la GPL (par exemple, GPLv2 ou GPLv3).
+Ce projet est basé sur le travail original de **parasyte (ou pyriell)** et est distribué sous les termes de la **Licence Publique Générale GNU (GNU GPL)**. Il est recommandé de consulter le fichier de licence spécifique (par exemple, `LICENSE` ou `COPYING`) inclus avec les sources originales.
 
 ## Remerciements
 
