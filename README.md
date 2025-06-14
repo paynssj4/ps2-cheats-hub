@@ -44,4 +44,4 @@ Ce projet est basé sur le travail original de **parasyte (ou pyriell)** et est 
 
 ## Remerciements
 
-*   Merci à **parasyte (pyriell)** pour le travail original sur la logique de décryptage des codes PS2.
+*   ce programme est inspiré du travail de **parasyte (pyriell)** pour le travail original sur la logique de décryptage des codes PS2.
