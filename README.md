@@ -3,6 +3,8 @@
 PS2 Cheats Hub est une application de bureau pour gérer et convertir des codes de triche PlayStation 2.
 Elle permet de décrypter les codes ARMAX et AR2/GS2, d’afficher les codes RAW et de générer des fichiers PNACH.
 
+![Capture d'écran de PS2 Cheats Hub](ps2_cheats_hub_qt_screen.jpg)
+
 ## Fonctionnalités
 
 - Décryptage des codes ARMAX et AR2/GS2

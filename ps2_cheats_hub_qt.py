@@ -15,11 +15,11 @@ import sys
 import os
 
 class PS2CheatsHubQt(QMainWindow):
-    def __init__(self):
+    def __init__(self, db_manager: PS2DatabaseManager):
         super().__init__()
         self.setWindowTitle("PS2 Cheats Hub - Moderne (Qt)")
         self.setMinimumSize(900, 600)
-        self.db_manager = PS2DatabaseManager()
+        self.db_manager = db_manager
         self._apply_dark_theme()
         self._init_ui()
         self.current_decrypted_items = []
@@ -313,7 +313,14 @@ class PS2CheatsHubQt(QMainWindow):
         self.btn_export.setEnabled(False)
 
 if __name__ == "__main__":
+    print(">>> Début de l'exécution du script.")
     app = QApplication(sys.argv)
-    win = PS2CheatsHubQt()
+    print(">>> QApplication créée.")
+    db_manager = PS2DatabaseManager()
+    print(">>> PS2DatabaseManager créée et chargée.")
+    win = PS2CheatsHubQt(db_manager)
+    print(">>> Fenêtre principale PS2CheatsHubQt créée.")
     win.show()
+    print(">>> win.show() appelé. L'interface devrait apparaître.")
+
     sys.exit(app.exec())

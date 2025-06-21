@@ -35,6 +35,9 @@
       <url>https://raw.githubusercontent.com/paynssj4/ps2-cheats-hub/main/screenshots/screenshot2.png</url>
     </screenshot>
     -->
+    <screenshot type="default">
+      <url>https://github.com/paynssj4/ps2-cheats-hub/raw/main/ps2_cheats_hub_qt_screen.jpg</url>
+    </screenshot>
   </screenshots>
 
   <launchable type="desktop-id">io.github.grego.ps2cheatshub.desktop</launchable>
