@@ -1,4 +1,4 @@
-# Fichiers/dossiers à ignorer pour un projet Python + Nuitka + Kivy/Buildozer
+# Fichiers/dossiers à ignorer pour un projet Python + Nuitka + Kivy/Buildozer + Flatpak
 
 # Python
 __pycache__/
@@ -13,6 +13,7 @@ __pycache__/
 
 # Nuitka/compilation
 build/
+build-dir/
 dist/
 *.exe
 *.bin
@@ -34,6 +35,13 @@ bin/
 *.apk
 *.keystore
 .buildozer/
+
+# Flatpak
+*.flatpak
+*.flatpakref
+.flatpak-builder/
+*.tar.gz
+*.whl
 
 # Environnements virtuels
 venv/
