@@ -1,0 +1,33 @@
+# Préparation de l'environnement pour compiler une appli Kivy/Buildozer sous WSL/Ubuntu
+
+# 1. Mettre à jour le système
+sudo apt update && sudo apt upgrade -y
+
+# 2. Installer Python, pip, git, et les dépendances de base
+sudo apt install -y python3 python3-pip git python3-setuptools python3-wheel python3-venv
+
+# 3. Installer les dépendances Android pour Buildozer
+sudo apt install -y build-essential ccache libffi-dev python3-dev libssl-dev libsqlite3-dev zlib1g-dev libncurses5 libncurses5-dev libncursesw5 libncursesw5-dev libtinfo5 libtinfo-dev libjpeg-dev libfreetype6-dev
+
+# 4. Installer pipx (optionnel mais recommandé)
+pip3 install --user pipx
+python3 -m pipx ensurepath
+
+# 5. Installer Cython, Kivy et Buildozer
+python3 -m pip install --upgrade pip
+python3 -m pip install cython kivy buildozer
+
+# 6. Initialiser Buildozer dans ton dossier projet
+cd /mnt/c/Users/grego/OneDrive/Documents/Ps2-cheats-hub/ps2-cheats-hub
+buildozer init
+
+# 7. Modifier buildozer.spec si besoin (nom, package, etc.)
+# 8. Compiler l'APK
+buildozer -v android debug
+
+# L'APK sera dans le dossier ./bin/
+
+# Remarque :
+# - La première compilation télécharge le SDK/NDK Android (peut être long)
+# - Tu peux éditer le .spec pour ajouter des permissions, changer le nom, etc.
+# - Pour tester sur un appareil Android, active le mode développeur et le débogage USB.

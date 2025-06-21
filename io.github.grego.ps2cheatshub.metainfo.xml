@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.grego.ps2cheatshub</id>
+  <name>PS2 Cheats Hub</name>
+  <summary>Gestionnaire moderne de codes de triche PS2 (Qt, PySide6)</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <developer_name>Grego</developer_name>
+  <url type="homepage">https://github.com/paynssj4/ps2-cheats-hub</url>
+  <url type="bugtracker">https://github.com/paynssj4/ps2-cheats-hub/issues</url>
+  <url type="vcs-browser">https://github.com/paynssj4/ps2-cheats-hub</url>
+
+  <description>
+    <p>
+      PS2 Cheats Hub est une application de bureau conçue pour aider les passionnés de PlayStation 2 à gérer et appliquer des codes de triche.
+      Elle permet aux utilisateurs de parcourir et de télécharger des fichiers de triche PNACH directement depuis des dépôts GitHub, de décrypter les codes Action Replay Max (ARMAX) et Action Replay 2 (AR2/GS2), et de les exporter au format PNACH pour une utilisation avec des émulateurs comme PCSX2.
+    </p>
+    <p>Fonctionnalités :</p>
+    <ul>
+      <li>Parcourir et charger des fichiers PNACH depuis des dépôts GitHub.</li>
+      <li>Décrypter les codes de triche ARMAX et AR2/GS2.</li>
+      <li>Exporter les codes décryptés au format PNACH.</li>
+      <li>Interface conviviale pour la gestion des bases de données de triche de jeux.</li>
+    </ul>
+  </description>
+
+  <screenshots>
+    <!-- Ajoutez ici des captures d'écran de votre application.
+         Elles sont très importantes pour la visibilité sur Flathub.
+         Exemple:
+    <screenshot type="default">
+      <url>https://raw.githubusercontent.com/paynssj4/ps2-cheats-hub/main/screenshots/screenshot1.png</url>
+    </screenshot>
+    <screenshot>
+      <url>https://raw.githubusercontent.com/paynssj4/ps2-cheats-hub/main/screenshots/screenshot2.png</url>
+    </screenshot>
+    -->
+  </screenshots>
+
+  <launchable type="desktop-id">io.github.grego.ps2cheatshub.desktop</launchable>
+  <provides>
+    <binary>ps2_cheats_hub_qt.sh</binary>
+  </provides>
+  <releases>
+    <!-- Ajoutez ici les informations de version de votre application.
+         Flathub peut les générer automatiquement si vous utilisez des tags Git.
+         Exemple:
+    <release version="1.0.0" date="2024-06-20">
+      <description>
+        <p>Première version avec les fonctionnalités de base.</p>
+      </description>
+    </release>
+    -->
+  </releases>
+  <categories>
+    <category>Utility</category>
+    <category>Game</category>
+  </categories>
+  <keywords>
+    <keyword>PS2</keyword>
+    <keyword>Cheats</keyword>
+    <keyword>Qt</keyword>
+    <keyword>PySide6</keyword>
+    <keyword>PNACH</keyword>
+  </keywords>
+  <!-- Classification du contenu (obligatoire pour Flathub) -->
+  <content_rating type="oars-1.1">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="violence-fantasy">none</content_attribute>
+    <content_attribute id="violence-realistic">none</content_attribute>
+    <content_attribute id="violence-bloodshed">none</content_attribute>
+    <content_attribute id="violence-sexual">none</content_attribute>
+    <content_attribute id="drugs-alcohol">none</content_attribute>
+    <content_attribute id="gambling">none</content_attribute>
+    <content_attribute id="language-profanity">none</content_attribute>
+    <content_attribute id="language-crude">none</content_attribute>
+    <content_attribute id="sex-nudity">none</content_attribute>
+    <content_attribute id="sex-themes">none</content_attribute>
+    <content_attribute id="sensory-misorientation">none</content_attribute>
+    <content_attribute id="online-interactions">none</content_attribute>
+    <content_attribute id="online-info">none</content_attribute>
+    <content_attribute id="money-gambling">none</content_attribute>
+  </content_rating>
+</component>

@@ -317,4 +317,3 @@ if __name__ == "__main__":
     win = PS2CheatsHubQt()
     win.show()
     sys.exit(app.exec())
-

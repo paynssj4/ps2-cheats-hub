@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=PS2 Cheats Hub
+Comment=Manage your PS2 cheat files from GitHub repositories
+Exec=ps2_cheats_hub_qt.sh
+Icon=io.github.grego.ps2cheatshub
+Terminal=false
+Type=Application
+Categories=Game;Utility;

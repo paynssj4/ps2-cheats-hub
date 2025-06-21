@@ -2,6 +2,8 @@
 import json
 import os
 from dataclasses import dataclass
+from pathlib import Path
+from PySide6.QtCore import QStandardPaths
 from typing import Dict, List, Optional
 
 @dataclass
@@ -13,7 +15,15 @@ class PS2GameInfo:
 
 class PS2DatabaseManager:
     def __init__(self, config_file: str = "ps2_databases.json"):
-        self.config_file = config_file
+        # Utiliser le répertoire de données standard de l'application
+        # Cela fonctionne correctement à la fois dans un Flatpak et en dehors.
+        # Le chemin sera par exemple : ~/.var/app/io.github.grego.ps2cheatshub/data/
+        app_data_path = QStandardPaths.writableLocation(QStandardPaths.AppDataLocation)
+
+        # S'assurer que le répertoire existe
+        Path(app_data_path).mkdir(parents=True, exist_ok=True)
+
+        self.config_file = os.path.join(app_data_path, config_file)
         self.games: List[PS2GameInfo] = [] 
         self.load_config()
 
@@ -108,7 +118,3 @@ class PS2DatabaseManager:
         """Récupère la liste de tous les jeux."""
         # Le tri doit être géré par la vue (ex: QSortFilterProxyModel)
         return self.games 
-
-
-
-

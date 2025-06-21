@@ -1,0 +1,64 @@
+# Fichiers/dossiers à ignorer pour un projet Python + Nuitka + Kivy/Buildozer
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+
+# Nuitka/compilation
+build/
+dist/
+*.exe
+*.bin
+*.spec
+*.o
+*.pdb
+*.manifest
+*.dll
+*.so
+*.a
+*.lib
+*.exp
+*.ilk
+*.nuitka-cache/
+
+# Kivy/Buildozer
+bin/
+.libs/
+*.apk
+*.keystore
+.buildozer/
+
+# Environnements virtuels
+venv/
+.env/
+ENV/
+
+# Fichiers de configuration locaux
+.settings/
+.idea/
+.vscode/
+
+# Fichiers spécifiques à l'utilisateur
+Gemini_Generated_Image_aigun5aigun5aigu.ico
+nuitka.spec
+build.bat
+
+# Fichiers temporaires
+*.~
+*~
+
+# Fichiers de sauvegarde d'éditeurs
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+
+# Fichiers de test ou de debug
+*.test
+*.debug

@@ -1,0 +1,80 @@
+{
+  "app-id": "io.github.grego.ps2cheatshub",
+  "runtime": "org.kde.Platform",
+  "runtime-version": "6.6",
+  "sdk": "org.kde.Sdk",
+  "command": "ps2_cheats_hub_qt.sh",
+  "finish-args": [
+    "--share=network", "--filesystem=home", "--device=dri",
+    "--socket=wayland",
+    "--socket=x11"
+  ],
+  "modules": [
+    {
+      "name": "python-dependencies",
+      "buildsystem": "simple",
+      "build-options": {
+        "build-args": [
+          "--share=network"
+        ]
+      },
+      "build-commands": [
+        "pip3 install --verbose --prefix=/app -r requirements.txt"
+      ],
+      "sources": [
+        { "type": "file", "path": "requirements.txt" }
+      ]
+    },
+    {
+      "name": "python-pyside6",
+      "buildsystem": "simple",
+      "build-options": {
+        "env": {
+          "PIP_EXTRA_ARGS": "--no-index --find-links=file://${PWD}"
+        }
+      },
+      "build-commands": [
+        "ls -la",
+        "pwd",
+        "tar xvf flatpak-wheels.tar.gz",
+        "pip3 install --prefix=/app PySide6-*.whl shiboken6-*.whl PySide6_Essentials-*.whl PySide6_Addons-*.whl"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://github.com/paynssj4/pyside-wheel/releases/download/pyside/flatpak-wheels.tar.gz",
+          "sha256": "d7723a4cb9d48aa6fd50f6879006751c7bb4f9d28293694b1986cd88d66f3b10",
+          "dest-filename": "flatpak-wheels.tar.gz"
+        }
+      ]
+    },
+    {
+      "name": "ps2cheatshub",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm644 ar2_ps2_logic.py /app/bin/ar2_ps2_logic.py",
+        "install -Dm644 armax_ps2_logic.py /app/bin/armax_ps2_logic.py",
+        "install -Dm644 ps2_database_manager.py /app/bin/ps2_database_manager.py",
+        "install -Dm644 ps2_database_frame_qt.py /app/bin/ps2_database_frame_qt.py",
+        "install -Dm644 ps2_github_handler.py /app/bin/ps2_github_handler.py",
+        "install -Dm644 ps2_cheats_hub_qt.py /app/bin/ps2_cheats_hub_qt.py",
+        "install -Dm755 ps2_cheats_hub_qt.sh /app/bin/ps2_cheats_hub_qt.sh",
+        "install -Dm644 io.github.grego.ps2cheatshub.desktop /app/share/applications/io.github.grego.ps2cheatshub.desktop",
+        "install -Dm644 io.github.grego.ps2cheatshub.png /app/share/icons/hicolor/128x128/apps/io.github.grego.ps2cheatshub.png",
+        "install -Dm644 io.github.grego.ps2cheatshub.metainfo.xml /app/share/metainfo/io.github.grego.ps2cheatshub.metainfo.xml"
+      ],
+      "sources": [
+        { "type": "file", "path": "ar2_ps2_logic.py" },
+        { "type": "file", "path": "armax_ps2_logic.py" },
+        { "type": "file", "path": "ps2_database_manager.py" },
+        { "type": "file", "path": "ps2_database_frame_qt.py" },
+        { "type": "file", "path": "ps2_github_handler.py" },
+        { "type": "file", "path": "ps2_cheats_hub_qt.py" },
+        { "type": "file", "path": "ps2_cheats_hub_qt.sh" },
+        { "type": "file", "path": "io.github.grego.ps2cheatshub.desktop" },
+        { "type": "file", "path": "io.github.grego.ps2cheatshub.png" },
+        { "type": "file", "path": "io.github.grego.ps2cheatshub.metainfo.xml" }
+      ]
+    }
+  ]
+}
