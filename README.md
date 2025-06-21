@@ -31,8 +31,5 @@ python -m nuitka --onefile --windows-disable-console --enable-plugin=pyside6 ps2
 
 ## Licence
 
-Projet sous licence **GNU GPL v3**. Basé sur le travail original de **parasyte/pyriell**.
+Projet sous licence **GNU GPL v2**. Basé sur le travail original de **parasyte/pyriell**.
 
-## Remerciements
-
-Merci à **parasyte** et **pyriell** pour la logique de décryptage des codes PS2.
